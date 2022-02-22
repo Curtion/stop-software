@@ -6,6 +6,10 @@
 
 配置信息在 config.json 中。software 为进程名称，通过任务管理器->详情信息查看，time 为时间段，只有在该时间段内锁定屏幕才会结束进程。
 
+# 下载
+
+https://github.com/Curtion/stop-software/releases/
+
 # 需求
 
 - 解锁时自动启动被关闭的程序
