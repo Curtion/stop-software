@@ -2,5 +2,9 @@ github.com/antchfx/jsonquery v1.1.5 h1:1YWrNFYCcIuJPIjFeOP5b6TXbLSUYY8qqxWbuZOB1
 github.com/antchfx/jsonquery v1.1.5/go.mod h1:RtMzTHohKaAerkfslTNjr3Y9MdxjKlSgIgaVjVKNiug=
 github.com/antchfx/xpath v1.2.0 h1:mbwv7co+x0RwgeGAOHdrKy89GvHaGvxxBtPK0uF9Zr8=
 github.com/antchfx/xpath v1.2.0/go.mod h1:i54GszH55fYfBmoZXapTHN8T8tkcHfRgLyVwwqzXNcs=
+github.com/brunoqc/go-windows-session-notifications v0.0.0-20170424175830-fec440a22328 h1:Nf03efSjxTO1zrg8P2WR3UVXfSNzHXl5F1h7Im4nqtI=
+github.com/brunoqc/go-windows-session-notifications v0.0.0-20170424175830-fec440a22328/go.mod h1:WGETPIXmRb9fIUDuJdMnbNfT41loNcP20LZ65ymtk5Q=
 github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e h1:1r7pUrabqp18hOBcwBwiTsbnFeTZHV9eER/QT5JVZxY=
 github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e/go.mod h1:cIg4eruTrX1D+g88fzRXU5OdNfaM+9IcxsU14FzY7Hc=
+golang.org/x/sys v0.0.0-20220209214540-3681064d5158 h1:rm+CHSpPEEW2IsXUib1ThaHIjuBVZjxNgSKmBLFfD4c=
+golang.org/x/sys v0.0.0-20220209214540-3681064d5158/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=

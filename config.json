@@ -1,11 +1,9 @@
 {
   "software": [
-    "QQ.exe",
-    "WeChat.exe"
+    "QQ.exe"
   ],
   "time": [
     "17:50",
     "20:00"
-  ],
-  "event": "lock"
+  ]
 }
