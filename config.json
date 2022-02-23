@@ -1,7 +1,11 @@
 {
-  "software": [
+  "stopSoftware": [
     "QQ.exe",
     "WeChat.exe"
+  ],
+  "startSoftware": [
+    "D:\\QQ\\Bin\\QQScLauncher.exe",
+    "D:\\WeChat\\WeChat.exe"
   ],
   "time": [
     "17:50",
