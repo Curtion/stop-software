@@ -64,7 +64,7 @@ func main() {
 					switch m.Param {
 					case session_notifications.WTS_SESSION_LOCK:
 						status := check_time(doc)
-						if !status {
+						if status {
 							stop_software(doc)
 						} else {
 							log.Println("屏幕锁定，但不满足关机程序条件")
