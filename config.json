@@ -3,12 +3,16 @@
     "QQ.exe",
     "WeChat.exe"
   ],
+  "stopTime": [
+    "17:50",
+    "20:00"
+  ],
   "startSoftware": [
     "D:\\QQ\\Bin\\QQScLauncher.exe",
     "D:\\WeChat\\WeChat.exe"
   ],
-  "time": [
-    "17:50",
-    "20:00"
+  "startTime": [
+    "08:50",
+    "09:30"
   ]
 }
