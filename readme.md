@@ -18,12 +18,13 @@
 
 https://github.com/Curtion/stop-software/releases/
 
- - stopSoftware.tar.gz 是一个控制台应用，启动后会有一个控制台
- - stopSoftware_hidden.tar.gz 会以隐藏控制台的方式运行，但是关闭应用需要使用任务管理器
+- stopSoftware.tar.gz 是一个控制台应用，启动后会有一个控制台界面。
+- stopSoftware_hidden.tar.gz 以隐藏控制台的方式运行，但关闭应用需要使用任务管理器。
 
-# 需求
+# TODO
 
 - 托盘运行
+- 开机自启
 
 # 注意
 
