@@ -37,13 +37,13 @@ func start_software(doc *jsonquery.Node) {
 
 func check_time_stop(doc *jsonquery.Node) bool {
 	timeValue := jsonquery.Find(doc, "stopTime/*")
-	timeNowValue := fmt.Sprintf("%d:%d", time.Now().Hour(), time.Now().Minute())
+	timeNowValue := fmt.Sprintf("%02d:%02d", time.Now().Hour(), time.Now().Minute())
 	return timeNowValue > timeValue[0].InnerText() && timeNowValue < timeValue[1].InnerText()
 }
 
 func check_time_start(doc *jsonquery.Node) bool {
 	timeValue := jsonquery.Find(doc, "startTime/*")
-	timeNowValue := fmt.Sprintf("%d:%d", time.Now().Hour(), time.Now().Minute())
+	timeNowValue := fmt.Sprintf("%02d:%02d", time.Now().Hour(), time.Now().Minute())
 	return timeNowValue > timeValue[0].InnerText() && timeNowValue < timeValue[1].InnerText()
 }
 
@@ -63,31 +63,29 @@ func main() {
 	chanClose := make(chan int)
 	go func() {
 		for {
-			select {
-			case m := <-chanMessages:
-				switch m.UMsg {
-				case session_notifications.WM_WTSSESSION_CHANGE:
-					switch m.Param {
-					case session_notifications.WTS_SESSION_LOCK:
-						status := check_time_stop(doc)
-						if status {
-							stop_software(doc)
-						} else {
-							log.Println("屏幕锁定，但不满足关机程序条件")
-						}
-					case session_notifications.WTS_SESSION_UNLOCK:
-						status := check_time_start(doc)
-						if status {
-							start_software(doc)
-						} else {
-							log.Println("屏幕解锁，但不满足启动程序条件")
-						}
+			m := <-chanMessages
+			switch m.UMsg {
+			case session_notifications.WM_WTSSESSION_CHANGE:
+				switch m.Param {
+				case session_notifications.WTS_SESSION_LOCK:
+					status := check_time_stop(doc)
+					if status {
+						stop_software(doc)
+					} else {
+						log.Println("屏幕锁定，但不满足关机程序条件")
 					}
-				case session_notifications.WM_QUERYENDSESSION:
-					log.Println("注销或关机")
+				case session_notifications.WTS_SESSION_UNLOCK:
+					status := check_time_start(doc)
+					if status {
+						start_software(doc)
+					} else {
+						log.Println("屏幕解锁，但不满足启动程序条件")
+					}
 				}
-				close(m.ChanOk)
+			case session_notifications.WM_QUERYENDSESSION:
+				log.Println("注销或关机")
 			}
+			close(m.ChanOk)
 		}
 	}()
 

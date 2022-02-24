@@ -24,6 +24,7 @@ https://github.com/Curtion/stop-software/releases/
 
 - 托盘运行
 - 开机自启
+- 启动时判断进程是否存在
 
 # 注意
 
